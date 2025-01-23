@@ -6,44 +6,50 @@
 }
 
 :root{
-  --bs-body-bg:#f4f4f9;
-  --bs-primary-bg-subtle:#f4f4f9;
+  --bs-body-bg: #F5F5F5;
+  --bs-primary-bg-subtle:#F5F5F5;
   
 }
 
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: rgb(199, 224, 245);
-  color: #333;
+  background-color: white;
+  color: #444;
 }
 
 img{
   margin-left: 5px;
 }
 
-.navbar{  background-color: #f4f4f9;
+.navbar{ 
+  background-color: #023b6d;
   position: sticky;
+  color: #C6CBEF;
 }
 
 .navbar a {
-  color: #4c4c4d;
-  text-decoration: none;
+  color: #C6CBEF;
+ text-decoration: none;
+  padding: 5px 20px;
+  display: block;
 }
 
-.navbar a:hover , .navbar a:active,
 .acc-bd a:hover,.acc-bd a:active {
-  color:  rgb(20 110 190); 
+  color: #009bd9;
 }
+.navbar a:hover , .navbar a:active{
+  color: #fff;
 
+}
  .sidenav {
   overflow-y: scroll; 
   height: 100%;
   width: 300px;
   position:fixed;
   left: 0;
-  background-color: #f4f4f9;
-  color: #343a40;
+  background-color: #F5F5F5;
+  color: #424242;
 }
 
  .sidenav svg{
@@ -65,8 +71,8 @@ img{
   -o-border-radius: 12%;
 }
 
-.sidenav a, .navbar a {
-  color: #343a40;
+.sidenav a {
+  color: #424242;
  text-decoration: none;
   padding: 5px 20px;
   display: block;
@@ -97,4 +103,8 @@ img{
   background-color: white;
   padding: 0px 5px 0px 5px;
   font-size: 0.9em;
+}
+.text-color{
+  color: #009bd9;
+
 }
