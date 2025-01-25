@@ -50,7 +50,7 @@
         <input class="form-control" id="CustName" type="text" />
       </div>
       <div class="w-25 p-3">
-        <button type="button" class="h-100 btn btn-outline-primary">
+        <button type="button" class="h-100 w-100 btn btn-outline-primary">
           New Customer
         </button>
       </div>
@@ -82,23 +82,29 @@
         </div>
 
         <div class="w-25 p-3">
-          <label for="PayMethod">payment method</label>
+          <label for="PayMethod">Payment Method</label>
           <select
             class="form-select"
             id="PayMethod"
             aria-label="Default select example"
+            onchange="toggleBankFields()"
           >
             <option selected>--Select--</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">Cash</option>
+            <option value="2">Prepaid</option>
+            <option value="3">Bank Transfer</option>
+            <option value="4">Deferred</option>
+            <option value="5">Unpaid</option>
+            <option value="6">Cash and Transfer</option>
           </select>
         </div>
-        <div class="w-25 p-3">
+
+        <div class="w-25 p-3" id="BankField" style="display: none">
           <label for="Bank">Bank</label>
           <input class="form-control" id="Bank" type="text" />
         </div>
-        <div class="w-25 p-3">
+
+        <div class="w-25 p-3" id="TransferImageField" style="display: none">
           <label for="TrFrImg">Transfer Image</label>
           <input class="form-control" id="TrFrImg" type="file" />
         </div>
@@ -136,24 +142,23 @@
 
       <div class="w-25 p-3">
         <label for="FrmDate">From Date</label>
-        <input class="form-control" id="FrmDate" type="date" />
+        <input class="form-control" id="FrmDate" type="datetime-local" />
       </div>
       <div class="w-25 p-3">
         <label for="ToDate">To Date</label>
-        <input class="form-control" id="ToDate" type="date" />
+        <input class="form-control" id="ToDate" type="datetime-local" />
       </div>
-      <div class="row flex">
-        <div class="w-25 p-3">
-          <button type="button" class="h-100 btn btn-outline-primary">
-            Save
-          </button>
-        </div>
-        <div class="w-25 p-3">
-          <button type="button" class="h-100 btn btn-outline-primary">
-            Cancel
-          </button>
-        </div>
+      <div class="w-25 p-3">
+        <button type="button" class="w-100 h-100 btn btn-outline-primary">
+          Save
+        </button>
+      </div>
+      <div class="w-25 p-3">
+        <button type="button" class="w-100 h-100 btn btn-outline-danger">
+          Cancel
+        </button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

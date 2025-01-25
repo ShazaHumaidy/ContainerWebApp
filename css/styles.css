@@ -27,18 +27,27 @@ img{
   position: sticky;
   color: #C6CBEF;
 }
-
-.navbar a {
+.dropdown-item
+{ color: #023b6d;
+  background-color: #fff;
+}
+.dropdown-item:hover
+{ color: #023b6d;
+  background-color: #e0e0e0;
+}
+.logout, .navbar button {
   color: #C6CBEF;
  text-decoration: none;
   padding: 5px 20px;
   display: block;
+  border: none;
 }
 
 .acc-bd a:hover,.acc-bd a:active {
   color: #009bd9;
 }
-.navbar a:hover , .navbar a:active{
+
+.logout:hover , .logout:active, .navbar button:active, .navbar button:hover{
   color: #fff;
 
 }
