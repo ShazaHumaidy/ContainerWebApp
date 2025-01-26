@@ -14,21 +14,35 @@ document.querySelectorAll('.menu-item').forEach((item) =>
 );
 
 /////// For direction website when you selection the language
-let selectLanguage = document.querySelector('select');
+let selectLanguage = document.querySelector('.lang-menu');
 let sideNav = document.querySelector('.sidebar');
 
 selectLanguage.addEventListener('click', (eve) => {
-    setLanguage(eve.target.value);
+    console.log(eve.target.value);
+    console.log(eve.target.classList[1]);
+    setLanguage(eve.target.classList[1]);
 });
 let setLanguage = (language) => {
     if (language == 'en') {
         sideNav.classList.add('ltr');
-        console.log('English');
     } else if (language == 'ar') {
-        if (sideNav.classList.contains('ltr')) {
-            sideNav.classList.remove('ltr');
-            sideNav.classList.add('rtl');
-        }
-        console.log('Arabic');
+        sideNav.classList.remove('ltr');
+        sideNav.classList.add('rtl');
     }
 };
+
+function toggleBankFields() {
+    const payMethod = document.getElementById('PayMethod').value;
+    const bankField = document.getElementById('BankField');
+    const transferImageField = document.getElementById('TransferImageField');
+
+    // إخفاء الحقول في البداية
+    bankField.style.display = 'none';
+    transferImageField.style.display = 'none';
+
+    // تحقق من القيمة وإذا كانت 3 أو 6، أظهر الحقول
+    if (payMethod == '3' || payMethod == '6') {
+        bankField.style.display = 'block';
+        transferImageField.style.display = 'block';
+    }
+}
