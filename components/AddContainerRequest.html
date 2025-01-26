@@ -13,16 +13,152 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <h2>Add Container Request</h2>
-    <div class="form-group row">
-      <div class="mb-3">
-        <label for="reqNum">Request Number</label>
-        <input class="form-control" id="reqNum" type="number" />
+    <h2 class="text-color">Add Container Request</h2>
+    <div class="form-group flex row">
+      <div class="w-25 p-3">
+        <label for="reqNo">Request No</label>
+        <input class="form-control" id="reqNo" type="number" />
       </div>
-      <div class="col-xs-4">
-        <label for="reqNum">Request Number</label>
-        <input class="form-control" id="reqNum" type="number" />
+      <div class="w-25 p-3">
+        <label for="reqDate">Request Date</label>
+        <input class="form-control" id="reqDate" type="date" />
+      </div>
+      <div class="w-50 p-3">
+        <label for="reqType"> Request Type</label>
+        <select
+          class="form-select"
+          id="reqType"
+          aria-label="Default select example"
+        >
+          <option selected>--Select--</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="w-25 p-3">
+        <label for="PhoneNum">Phone Number</label>
+        <input class="form-control" id="PhoneNum" type="tel" />
+      </div>
+      <div class="w-25 p-3">
+        <label for="WhatsNum">Whatsaapp Number</label>
+        <input class="form-control" id="WhatsNum" type="tel" />
+      </div>
+      <div class="w-25 p-3">
+        <label for="CustName">Customer Name</label>
+        <input class="form-control" id="CustName" type="text" />
+      </div>
+      <div class="w-25 p-3">
+        <button type="button" class="h-100 w-100 btn btn-outline-primary">
+          New Customer
+        </button>
+      </div>
+      <div class="w-25 p-3">
+        <label for="ConNo">Container No</label>
+        <input class="form-control" id="ConNo" type="number" />
+      </div>
+      <div class="w-50 p-3">
+        <label for="ConSize">Container Size</label>
+        <select
+          class="form-select"
+          id="reqType"
+          aria-label="Default select example"
+        >
+          <option selected>--Select--</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="w-25 p-3">
+        <label for="driver">Driver</label>
+        <input class="form-control" id="driver" type="text" />
+      </div>
+      <div class="row flex">
+        <div class="w-25 p-3">
+          <label for="Price">Price</label>
+          <input class="form-control" id="Price" type="tel" />
+        </div>
+
+        <div class="w-25 p-3">
+          <label for="PayMethod">Payment Method</label>
+          <select
+            class="form-select"
+            id="PayMethod"
+            aria-label="Default select example"
+            onchange="toggleBankFields()"
+          >
+            <option selected>--Select--</option>
+            <option value="1">Cash</option>
+            <option value="2">Prepaid</option>
+            <option value="3">Bank Transfer</option>
+            <option value="4">Deferred</option>
+            <option value="5">Unpaid</option>
+            <option value="6">Cash and Transfer</option>
+          </select>
+        </div>
+
+        <div class="w-25 p-3" id="BankField" style="display: none">
+          <label for="Bank">Bank</label>
+          <input class="form-control" id="Bank" type="text" />
+        </div>
+
+        <div class="w-25 p-3" id="TransferImageField" style="display: none">
+          <label for="TrFrImg">Transfer Image</label>
+          <input class="form-control" id="TrFrImg" type="file" />
+        </div>
+      </div>
+      <div class="w-25 p-3">
+        City
+        <select
+          class="form-select"
+          id="City"
+          aria-label="Default select example"
+        >
+          <option selected>--Select--</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="w-25 p-3">
+        <label for="Street">Street</label>
+        <select
+          class="form-select"
+          id="Street"
+          aria-label="Default select example"
+        >
+          <option selected>--Select--</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="w-50 p-3">
+        <label for="LocShr">Location Share</label>
+        <input class="form-control" id="LocShr" type="text" />
+      </div>
+
+      <div class="w-25 p-3">
+        <label for="FrmDate">From Date</label>
+        <input class="form-control" id="FrmDate" type="datetime-local" />
+      </div>
+      <div class="w-25 p-3">
+        <label for="ToDate">To Date</label>
+        <input class="form-control" id="ToDate" type="datetime-local" />
+      </div>
+      <div class="w-25 p-3">
+        <button type="button" class="w-100 h-100 btn btn-outline-primary">
+          Save
+        </button>
+      </div>
+      <div class="w-25 p-3">
+        <button type="button" class="w-100 h-100 btn btn-outline-danger">
+          Cancel
+        </button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
