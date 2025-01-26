@@ -5,24 +5,25 @@
   box-sizing: border-box;
 }
 
-:root{
-  --bs-body-bg:#f4f4f9;
-  --bs-primary-bg-subtle:#f4f4f9;
-  
+:root {
+  --bs-body-bg: #f4f4f9;
+  --bs-primary-bg-subtle: #f4f4f9;
+
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Open Sans", serif;
   line-height: 1.6;
   background-color: rgb(199, 224, 245);
   color: #333;
 }
 
-img{
+img {
   margin-left: 5px;
 }
 
-.navbar{  background-color: #f4f4f9;
+.navbar {
+  background-color: #f4f4f9;
   position: sticky;
 }
 
@@ -31,22 +32,32 @@ img{
   text-decoration: none;
 }
 
-.navbar a:hover , .navbar a:active,
-.acc-bd a:hover,.acc-bd a:active {
-  color:  rgb(20 110 190); 
+.navbar a:hover,
+.navbar a:active,
+.acc-bd a:hover,
+.acc-bd a:active {
+  color: rgb(20 110 190);
 }
 
- .sidenav {
-  overflow-y: scroll; 
+.sidebar {
+  overflow-y: scroll;
   height: 100%;
   width: 300px;
-  position:fixed;
-  left: 0;
+  position: fixed;
+  /* left: 0; */
   background-color: #f4f4f9;
   color: #343a40;
+
+  &.rtl {
+    right: 0;
+  }
+
+  &.ltr {
+    left: 0;
+  }
 }
 
- .sidenav svg{
+.sidenav svg {
   line-height: 35px;
   display: inline-block;
   width: 40px;
@@ -65,14 +76,15 @@ img{
   -o-border-radius: 12%;
 }
 
-.sidenav a, .navbar a {
+.sidenav a,
+.navbar a {
   color: #343a40;
- text-decoration: none;
+  text-decoration: none;
   padding: 5px 20px;
   display: block;
 }
 
-.acc-bd a{
+.acc-bd a {
   font-size: 15px;
   margin-left: 10px;
 }
@@ -90,7 +102,7 @@ img{
 
 /* Container Requset */
 
-.form-group > label {
+.form-group>label {
   top: 18px;
   left: 6px;
   position: relative;
