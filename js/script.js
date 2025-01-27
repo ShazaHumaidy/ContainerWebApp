@@ -28,3 +28,44 @@ function toggleBankFields() {
     transferImageField.style.display = "block";
   }
 }
+
+(function () {
+  "use strict";
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll(".needs-validation");
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
+
+/////// For direction website when you selection the language
+let selectLanguage = document.querySelector(".lang-menu");
+let sideNav = document.querySelector(".sidebar");
+
+selectLanguage.addEventListener("click", (eve) => {
+  console.log(eve.target.value);
+  console.log(eve.target.classList[1]);
+  setLanguage(eve.target.classList[1]);
+});
+let setLanguage = (language) => {
+  if (language == "en") {
+    sideNav.classList.add("ltr");
+  } else if (language == "ar") {
+    sideNav.classList.remove("ltr");
+    sideNav.classList.add("rtl");
+  }
+};
