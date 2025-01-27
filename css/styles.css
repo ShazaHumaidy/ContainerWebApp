@@ -19,8 +19,15 @@ body {
   color: #444;
 }
 
-img {
-  margin-left: 5px;
+nav {
+  img {
+    margin-left: 10px;
+  }
+
+  .btn {
+    margin-right: 25px;
+  }
+
 }
 
 .navbar {
@@ -64,8 +71,9 @@ img {
 .sidebar {
   overflow-y: scroll;
   height: 100%;
-  width: 300px;
+  width: 350px;
   position: fixed;
+
   /* left: 0; */
   background-color: #F5F5F5;
   color: #424242;
@@ -77,6 +85,17 @@ img {
   &.ltr {
     left: 0;
   }
+
+  .sidebar-container {
+    margin: 10px;
+  }
+}
+
+.sidenav .home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0 !important
 }
 
 .sidenav svg {
@@ -84,7 +103,7 @@ img {
   display: inline-block;
   width: 40px;
   height: 40px;
-  margin-right: 5px;
+  margin-right: 10px;
   padding: 10px;
   text-align: center;
   vertical-align: middle;
@@ -98,21 +117,24 @@ img {
   -o-border-radius: 12%;
 }
 
+
 .sidenav a {
   color: #424242;
   text-decoration: none;
-  padding: 5px 20px;
+
   display: block;
 }
 
 .acc-bd a {
   font-size: 15px;
   margin-left: 10px;
+  padding: 5px 20px;
 }
 
 .main-content {
-  margin-left: 300px;
+  margin-left: 350px;
   padding: 20px;
+
 }
 
 .hidden {

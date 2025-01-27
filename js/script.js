@@ -17,17 +17,32 @@ document.querySelectorAll('.menu-item').forEach((item) =>
 let selectLanguage = document.querySelector('.lang-menu');
 let sideNav = document.querySelector('.sidebar');
 
+let HTMLTag = document.querySelector('html');
+
+let LanguageFile = document.createElement('link');
+
 selectLanguage.addEventListener('click', (eve) => {
-    console.log(eve.target.value);
-    console.log(eve.target.classList[1]);
     setLanguage(eve.target.classList[1]);
 });
 let setLanguage = (language) => {
     if (language == 'en') {
         sideNav.classList.add('ltr');
+        HTMLTag.lang = 'en';
+        HTMLTag.dir = 'ltr';
+        LanguageFile.rel = 'stylesheet';
+        LanguageFile.href = '../css/styles.css';
+        console.log(LanguageFile);
+        document.head.appendChild(LanguageFile);
     } else if (language == 'ar') {
         sideNav.classList.remove('ltr');
         sideNav.classList.add('rtl');
+        HTMLTag.lang = 'ar';
+        HTMLTag.dir = 'rtl';
+
+        LanguageFile.rel = 'stylesheet';
+        LanguageFile.href = '../css/styleRTL.css';
+        console.log(LanguageFile);
+        document.head.appendChild(LanguageFile);
     }
 };
 
@@ -46,3 +61,5 @@ function toggleBankFields() {
         transferImageField.style.display = 'block';
     }
 }
+
+console.log(document.querySelector('html').dir);
