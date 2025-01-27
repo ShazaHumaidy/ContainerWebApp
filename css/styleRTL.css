@@ -9,7 +9,6 @@ nav {
 }
 
 .sidenav svg {
-
     margin-left: 10px;
 }
 
@@ -21,7 +20,7 @@ nav {
 
     &::after {
         margin-right: auto;
-        margin-left: 0;
+        margin-left: 0 !important
     }
 }
 
