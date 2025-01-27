@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+  dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1" />
+
+    <!-- Google Font "Open Sans" -->
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet"
+      href="../css/bootstrap.min.css">
+    <link rel="stylesheet"
+      href="../css/all.min.css">
+    <link rel="stylesheet"
+      href="../css/styles.css">
+    <!-- <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb"
+      crossorigin="anonymous"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
     <title>Dynamic Content with Bootstrap</title>
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <h2 class="text-color">Add Container Request</h2>
     <div class="form-group flex row">
       <div class="w-25 p-3">
         <label for="reqNo">Request No</label>
-        <input class="form-control" id="reqNo" type="number" />
+        <input class="form-control"
+          id="reqNo"
+          type="number"
+          dir="auto" />
       </div>
       <div class="w-25 p-3">
         <label for="reqDate">Request Date</label>
-        <input class="form-control" id="reqDate" type="date" />
+        <input class="form-control"
+          id="reqDate"
+          type="date"
+          dir="auto" />
       </div>
       <div class="w-50 p-3">
         <label for="reqType"> Request Type</label>
-        <select
-          class="form-select"
+        <select class="form-select"
           id="reqType"
           aria-label="Default select example"
-        >
+          dir="auto">
           <option selected>--Select--</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -39,32 +64,43 @@
 
       <div class="w-25 p-3">
         <label for="PhoneNum">Phone Number</label>
-        <input class="form-control" id="PhoneNum" type="tel" />
+        <input class="form-control"
+          id="PhoneNum"
+          type="tel"
+          dir="auto" />
       </div>
       <div class="w-25 p-3">
         <label for="WhatsNum">Whatsaapp Number</label>
-        <input class="form-control" id="WhatsNum" type="tel" />
+        <input class="form-control"
+          id="WhatsNum"
+          type="tel"
+          dir="auto" />
       </div>
       <div class="w-25 p-3">
         <label for="CustName">Customer Name</label>
-        <input class="form-control" id="CustName" type="text" />
+        <input class="form-control"
+          id="CustName"
+          type="text"
+          dir="auto" />
       </div>
       <div class="w-25 p-3">
-        <button type="button" class="h-100 w-100 btn btn-outline-primary">
+        <button type="button"
+          class="h-100 w-100 btn btn-outline-primary">
           New Customer
         </button>
       </div>
       <div class="w-25 p-3">
         <label for="ConNo">Container No</label>
-        <input class="form-control" id="ConNo" type="number" />
+        <input class="form-control"
+          id="ConNo"
+          type="number"
+          dir="auto" />
       </div>
       <div class="w-50 p-3">
         <label for="ConSize">Container Size</label>
-        <select
-          class="form-select"
+        <select class="form-select"
           id="reqType"
-          aria-label="Default select example"
-        >
+          aria-label="Default select example">
           <option selected>--Select--</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -73,22 +109,26 @@
       </div>
       <div class="w-25 p-3">
         <label for="driver">Driver</label>
-        <input class="form-control" id="driver" type="text" />
+        <input class="form-control"
+          id="driver"
+          type="text"
+          dir="auto" />
       </div>
       <div class="row flex">
         <div class="w-25 p-3">
           <label for="Price">Price</label>
-          <input class="form-control" id="Price" type="tel" />
+          <input class="form-control"
+            id="Price"
+            type="tel"
+            dir="auto" />
         </div>
 
         <div class="w-25 p-3">
           <label for="PayMethod">Payment Method</label>
-          <select
-            class="form-select"
+          <select class="form-select"
             id="PayMethod"
             aria-label="Default select example"
-            onchange="toggleBankFields()"
-          >
+            onchange="toggleBankFields()">
             <option selected>--Select--</option>
             <option value="1">Cash</option>
             <option value="2">Prepaid</option>
@@ -99,23 +139,31 @@
           </select>
         </div>
 
-        <div class="w-25 p-3" id="BankField" style="display: none">
+        <div class="w-25 p-3"
+          id="BankField"
+          style="display: none">
           <label for="Bank">Bank</label>
-          <input class="form-control" id="Bank" type="text" />
+          <input class="form-control"
+            id="Bank"
+            type="text"
+            dir="auto" />
         </div>
 
-        <div class="w-25 p-3" id="TransferImageField" style="display: none">
+        <div class="w-25 p-3"
+          id="TransferImageField"
+          style="display: none">
           <label for="TrFrImg">Transfer Image</label>
-          <input class="form-control" id="TrFrImg" type="file" />
+          <input class="form-control"
+            id="TrFrImg"
+            type="file"
+            dir="auto" />
         </div>
       </div>
       <div class="w-25 p-3">
         City
-        <select
-          class="form-select"
+        <select class="form-select"
           id="City"
-          aria-label="Default select example"
-        >
+          aria-label="Default select example">
           <option selected>--Select--</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -124,11 +172,9 @@
       </div>
       <div class="w-25 p-3">
         <label for="Street">Street</label>
-        <select
-          class="form-select"
+        <select class="form-select"
           id="Street"
-          aria-label="Default select example"
-        >
+          aria-label="Default select example">
           <option selected>--Select--</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -137,28 +183,41 @@
       </div>
       <div class="w-50 p-3">
         <label for="LocShr">Location Share</label>
-        <input class="form-control" id="LocShr" type="text" />
+        <input class="form-control"
+          id="LocShr"
+          type="text"
+          dir="auto" />
       </div>
 
       <div class="w-25 p-3">
         <label for="FrmDate">From Date</label>
-        <input class="form-control" id="FrmDate" type="datetime-local" />
+        <input class="form-control"
+          id="FrmDate"
+          type="datetime-local"
+          dir="auto" />
       </div>
       <div class="w-25 p-3">
         <label for="ToDate">To Date</label>
-        <input class="form-control" id="ToDate" type="datetime-local" />
+        <input class="form-control"
+          id="ToDate"
+          type="datetime-local"
+          dir="auto" />
       </div>
       <div class="w-25 p-3">
-        <button type="button" class="w-100 h-100 btn btn-outline-primary">
+        <button type="button"
+          class="w-100 h-100 btn btn-outline-primary">
           Save
         </button>
       </div>
       <div class="w-25 p-3">
-        <button type="button" class="w-100 h-100 btn btn-outline-danger">
+        <button type="button"
+          class="w-100 h-100 btn btn-outline-danger">
           Cancel
         </button>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

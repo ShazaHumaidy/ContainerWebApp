@@ -12,22 +12,7 @@ document.querySelectorAll(".menu-item").forEach((item) =>
       .then((html) => (mainContent.innerHTML = html)); // استبدال المحتوى
   })
 );
-
-function toggleBankFields() {
-  const payMethod = document.getElementById("PayMethod").value;
-  const bankField = document.getElementById("BankField");
-  const transferImageField = document.getElementById("TransferImageField");
-
-  // إخفاء الحقول في البداية
-  bankField.style.display = "none";
-  transferImageField.style.display = "none";
-
-  // تحقق من القيمة وإذا كانت 3 أو 6، أظهر الحقول
-  if (payMethod == "3" || payMethod == "6") {
-    bankField.style.display = "block";
-    transferImageField.style.display = "block";
-  }
-}
+///////
 
 (function () {
   "use strict";
@@ -51,21 +36,53 @@ function toggleBankFields() {
     );
   });
 })();
-
 /////// For direction website when you selection the language
 let selectLanguage = document.querySelector(".lang-menu");
 let sideNav = document.querySelector(".sidebar");
 
+let HTMLTag = document.querySelector("html");
+
+let LanguageFile = document.createElement("link");
+
 selectLanguage.addEventListener("click", (eve) => {
-  console.log(eve.target.value);
-  console.log(eve.target.classList[1]);
   setLanguage(eve.target.classList[1]);
 });
 let setLanguage = (language) => {
   if (language == "en") {
     sideNav.classList.add("ltr");
+    HTMLTag.lang = "en";
+    HTMLTag.dir = "ltr";
+    LanguageFile.rel = "stylesheet";
+    LanguageFile.href = "../css/styles.css";
+    console.log(LanguageFile);
+    document.head.appendChild(LanguageFile);
   } else if (language == "ar") {
     sideNav.classList.remove("ltr");
     sideNav.classList.add("rtl");
+    HTMLTag.lang = "ar";
+    HTMLTag.dir = "rtl";
+
+    LanguageFile.rel = "stylesheet";
+    LanguageFile.href = "../css/styleRTL.css";
+    console.log(LanguageFile);
+    document.head.appendChild(LanguageFile);
   }
 };
+
+function toggleBankFields() {
+  const payMethod = document.getElementById("PayMethod").value;
+  const bankField = document.getElementById("BankField");
+  const transferImageField = document.getElementById("TransferImageField");
+
+  // إخفاء الحقول في البداية
+  bankField.style.display = "none";
+  transferImageField.style.display = "none";
+
+  // تحقق من القيمة وإذا كانت 3 أو 6، أظهر الحقول
+  if (payMethod == "3" || payMethod == "6") {
+    bankField.style.display = "block";
+    transferImageField.style.display = "block";
+  }
+}
+
+console.log(document.querySelector("html").dir);
