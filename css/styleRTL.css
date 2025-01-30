@@ -8,8 +8,16 @@ nav {
     }
 }
 
+.dropdown-menu {
+    left: 50% !important;
+    transform: translateX(-20%) !important;
+    -webkit-transform: translateX(-20%) !important;
+    -moz-transform: translateX(-20%) !important;
+    -ms-transform: translateX(-20%) !important;
+    -o-transform: translateX(-20%) !important;
+}
+  
 .sidenav svg {
-
     margin-left: 10px;
 }
 
@@ -21,7 +29,7 @@ nav {
 
     &::after {
         margin-right: auto;
-        margin-left: 0;
+        margin-left: 0 !important
     }
 }
 
