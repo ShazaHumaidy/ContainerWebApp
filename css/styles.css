@@ -157,3 +157,15 @@ nav {
   color: #009bd9;
 
 }
+
+/* For Table */
+.table th:not(.num),
+.table td {
+  text-align: center;
+}
+
+.table .buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
