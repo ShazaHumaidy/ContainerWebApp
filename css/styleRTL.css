@@ -8,6 +8,15 @@ nav {
     }
 }
 
+.dropdown-menu {
+    left: 50% !important;
+    transform: translateX(-20%) !important;
+    -webkit-transform: translateX(-20%) !important;
+    -moz-transform: translateX(-20%) !important;
+    -ms-transform: translateX(-20%) !important;
+    -o-transform: translateX(-20%) !important;
+}
+  
 .sidenav svg {
     margin-left: 10px;
 }
